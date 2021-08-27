@@ -13,39 +13,26 @@ export class MenuComponent implements OnInit {
 
   menuItems = new Array<IMenu>();
 
-  constructor(
-              private router: Router) {
+  constructor() {
     this.menuItems = [
       {
-        label: 'Métricas',
-        icon: 'icon-insert_chart',
+        label: 'Historia clinica',
+        icon: 'icon-cat',
         route: 'home'
       },
       {
-        label: 'Proyectos',
-        icon: 'icon-now_widgets',
-        route: 'proyecto'
+        label: 'Citas',
+        icon: 'icon-date_range',
+        route: 'citas'
       },
       {
-        label: 'Contratos',
-        icon: ' icon-library_books',
-        route: 'contrato'
-      },
-      {
-        label: 'Municipios',
-        icon: 'icon-map',
-        route: 'municipio'
-      },
-      {
-        label: 'Administración',
-        icon: 'icon-cog',
-        route: 'administracion'
+        label: 'Info pet',
+        icon: ' icon-pets',
+        route: 'pet'
       }
     ];
   }
 
-
   ngOnInit(): void {
   }
-
 }

@@ -1,0 +1,21 @@
+svg {
+  width: 70px;
+  height: 100%;
+}
+
+image {
+  width: 70px;
+  height: 100%;
+}
+
+.options:hover {
+  background-color: var(--bckg-level-second);
+  border-radius: 50%;
+}
+
+ul {
+  list-style: none;
+  margin: 0;
+  padding: 1rem;
+}
+

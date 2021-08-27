@@ -12,30 +12,37 @@ const routes: Routes = [
         redirectTo: '/home',
         pathMatch: 'full',
       },
-      /* {
-         path: 'home',
-         data: {
-           breadcrumb: 'home'
-         },
-         loadChildren: () => import('./core/home/home.module').then(m => m.HomeModule)
-       },
-       {
-         path: 'proyecto',
-         data: {
-           breadcrumb: 'Proyectos'
-         },
-         loadChildren: () => import('./core/proyecto/proyecto.module').then(m => m.ProyectoModule)
-       }*/
+      {
+        path: 'home',
+        data: {
+          breadcrumb: 'home'
+        },
+        loadChildren: () => import('./core/history/history.module').then(m => m.HistoryModule)
+      },
+      {
+        path: 'citas',
+        data: {
+          breadcrumb: 'citas'
+        },
+        loadChildren: () => import('./core/appointments/appointments.module').then(m => m.AppointmentsModule)
+      },
+      {
+        path: 'pet',
+        data: {
+          breadcrumb: 'pet'
+        },
+        loadChildren: () => import('./core/pet/pet.module').then(m => m.PetModule)
+      }
     ]
   },
-  /*{
-    path: 'login',
-    loadChildren: () => import('./core/auth/auth.module').then(m => m.AuthModule)
+  {
+    path: 'ingreso',
+    loadChildren: () => import('./core/pet/pet.module').then(m => m.PetModule)
   },
   {
     path: '**',
     loadChildren: () => import('./page-not-found/page-not-found.module').then(m => m.PageNotFoundModule)
-  },*/
+  },
 ];
 
 @NgModule({

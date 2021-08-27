@@ -1,6 +1,5 @@
 import {Component, OnInit} from '@angular/core';
 import {Subscription} from 'rxjs';
-import {MessageService} from 'primeng/api';
 
 @Component({
   selector: 'app-layout',
@@ -17,7 +16,6 @@ export class LayoutComponent implements OnInit {
   showHeaderMenu: boolean;
 
   constructor(
-    private messageService: MessageService,
   ) {
   }
 
@@ -27,25 +25,5 @@ export class LayoutComponent implements OnInit {
   collapseMenu() {
     this.main = this.main === 'main' ? 'main-collapse' : 'main';
     this.displayContent = !this.displayContent;
-  }
-
-  onReject() {
-    this.messageService.clear();
-
-    this.messageService.add({
-      severity: 'warn',
-      summary: 'Respuesta de la petición',
-      detail: 'Esta notificación permanecerá sin completar'
-    });
-  }
-
-  onConfirm() {
-    this.messageService.clear();
-
-    this.messageService.add({
-      severity: 'success',
-      summary: 'Respuesta de la petición',
-      detail: 'Reintento enviado con éxito'
-    });
   }
 }

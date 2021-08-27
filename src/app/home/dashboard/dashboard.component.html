@@ -1,0 +1,26 @@
+<section class="content-components">
+  <div class="header">
+    <h1>Métricas</h1>
+  </div>
+  <div class="content">
+    <div class="container-dashboard">
+      <div class="container-summary">
+        <h3 class="title text--sentence-case">Gestión a la fecha</h3>
+        <div class="summary">
+          <div class="summary-container">
+            <h4 class="title-summary text--sentence-case">¿Cómo vamos?</h4>
+            <ol class="list-summary">
+              <li class="list-summary--item" *ngFor="let item of items">
+                <span class="d-inline-block text--sentence-case">{{ item.name }}:</span>
+                <span class="list-summary-value">{{ item.value }}</span>
+              </li>
+            </ol>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+  </div>
+</section>

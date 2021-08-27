@@ -1,1 +1,201 @@
-/* You can add global styles to this file, and also import other style files */
+@import url("assets/icomoon/style.css");
+@import url("assets/icomoon-v1.0/style.css");
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+*:focus {
+  outline: 0px;
+}
+
+:root {
+  --yellow: #FFD80E;
+  --green: #0e788b;
+  --orange: #F69D3F;
+  --danger: #e85342;
+  --ligth-gray: #fdfdfd;
+  --ligth-gray-2: #fbfbfb;
+  --gray: #5B5B5B;
+  --sky-blue: #eaf8ff;
+  --ligth-yellow: #ffe9a7;
+  --ligth-blue: #1e92a7;
+  --gray-background: #F5F4F4;
+  --bckg-level-second: #DFDEDE;
+  --white: #ffffff;
+  --black: #222222;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  color: var(--gray);
+}
+
+p {
+  margin: 0;
+}
+
+i:hover {
+  opacity: 0.9;
+}
+
+.pointer:hover {
+  cursor: pointer;
+  opacity: 0.9;
+}
+
+
+.font-bold {
+  font-weight: bold
+}
+
+.font-16 {
+  font-size: 16px;
+}
+
+.font-20 {
+  font-size: 20px;
+}
+
+.font-24 {
+  font-size: 24px;
+}
+
+.font-30 {
+  font-size: 30px;
+}
+
+.font-10-em {
+  font-size: 10em;
+}
+
+.float-right {
+  float: right;
+}
+
+.color-gray {
+  color: var(--gray);
+}
+
+.color-white {
+  color: var(--white);
+}
+
+.color-green {
+  color: var(--green)
+}
+
+.color-orange {
+  color: var(--orange)
+}
+
+.color-blue {
+  color: var(--sky-blue);
+}
+
+.color-danger {
+  color: var(--danger);
+}
+
+.content-components {
+  display: grid;
+  grid-template-rows: 12% auto;
+  grid-template-areas: 'header' 'content';
+  height: 100%;
+  min-height: 100%;
+}
+
+.content-components > .header {
+  grid-area: header;
+  border-bottom: 2px solid var(--bckg-level-second);
+  background-color: var(--ligth-gray);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.content-components > .content {
+  grid-area: content;
+  overflow: auto;
+  height: 70vh;
+  padding: 1rem;
+}
+
+.content h1 {
+  margin: 20px;
+}
+
+
+/*start Styles notifications*/
+
+.box-item {
+  padding-bottom: 1rem;
+  border-bottom: 2px solid var(--ligth-yellow);
+  margin: 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.box-item:hover {
+  background-color: var(--ligth-gray-2);
+}
+
+.text-item > h4 {
+  margin-bottom: 1rem;
+}
+
+.text-item > span {
+  margin: 1rem;
+  color: var(--gray);
+}
+
+.item > h4 {
+  margin-left: 0;
+}
+
+/*end Styles notifications*/
+
+/* start top-bar*/
+
+.tob-bar {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid var(--bckg-level-second);
+  padding: .5rem;
+}
+
+.tob-bar .bg-top-bar {
+  background-color: var(--ligth-gray-2);
+}
+
+.grid-2-fr {
+  padding: 1rem;
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  grid-gap: 1rem;
+}
+
+/* end top-bar*/
+
+
+/* Responsive Styles */
+@media screen and (max-width: 767px) {
+}
+
+@media screen and (max-width: 575px) {
+
+}
+
+
