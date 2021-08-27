@@ -1,0 +1,12 @@
+<ul class="p-d-flex p-dir-row">
+  <i class="icon-home font-20 pointer" routerLink="/home"></i>
+  <li *ngFor="let breadcrumb of breadcrumbs; let i = index ">
+    <span [routerLink]="breadcrumb.url"
+          [ngClass]="{ 'font-bold': true,
+                       'pointer': i != breadcrumbs.length - 1,
+                       'active': i == breadcrumbs.length - 1}">
+      &nbsp; / &nbsp;{{ breadcrumb.label }}&nbsp;</span>
+  </li>
+</ul>
+
+

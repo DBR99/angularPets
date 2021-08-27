@@ -1,0 +1,19 @@
+<div *ngIf="showHeaderMenu" class="header-menu" [routerLink]="'/home'">
+  <svg>
+    <image class="pointer" [routerLink]="'/home'"  [class.display]="display" xlink:href="./assets/logo/logo-gesca3t.svg" src="yourfallback.png"/>
+  </svg>
+</div>
+
+<nav [class.display]="display">
+  <ul>
+    <li *ngFor="let item of menuItems">
+      <i [ngClass]="item.icon" class="color-white font-24"></i>
+      <a [routerLink]="'/' + item.route" routerLinkActive="active" >{{item.label}}</a>
+    </li>
+  </ul>
+
+  <i class="color-white  icon-exit-run font-30"></i>
+  <a class="font-bold">Cerrar sesión</a>
+</nav>
+
+

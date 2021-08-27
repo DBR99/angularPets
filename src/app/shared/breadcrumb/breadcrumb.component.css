@@ -1,0 +1,16 @@
+ul {
+  list-style-type: none;
+  padding: 0 0 0 1rem;
+}
+
+i {
+  color: var(--gray);
+}
+
+span {
+  color: var(--gray);
+}
+
+.active {
+  color: var(--green);
+}
