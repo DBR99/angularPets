@@ -40,6 +40,5 @@ export class NewComponent implements OnInit {
       return;
     }
     this._pet.newPet(this.formRegister.getRawValue());
-    alert('SUCCESS!! :-)\n\n' + JSON.stringify(this.formRegister.value, null, 4));
   }
 }
