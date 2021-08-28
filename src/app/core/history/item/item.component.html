@@ -1,1 +1,8 @@
-<p>item works!</p>
+<div class="card-border p-d-flex p-justify-around p-p-2 p-mb-2">
+  <span [class]="item.icon"></span>
+  <div class="text-description p-d-flex p-flex-column p-text-center">
+    <span class="color-gray font-bold">{{item.description}}</span>
+    <span class="color-gray">{{item.observations}}</span>
+  </div>
+  <span class="color-gray ">{{item.date}}</span>
+</div>

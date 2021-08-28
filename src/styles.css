@@ -30,6 +30,9 @@ body {
   --bckg-level-second: #DFDEDE;
   --white: #ffffff;
   --black: #222222;
+  --coral: #ff7075;
+  --blue: #25ccff;
+  --purple: #ff4fbb;
 }
 
 h1,
@@ -101,11 +104,19 @@ i:hover {
 }
 
 .color-blue {
-  color: var(--sky-blue);
+  color: var(--blue);
 }
 
 .color-danger {
   color: var(--danger);
+}
+
+.color-coral {
+  color: var(--coral);
+}
+
+.color-purple {
+  color: var(--purple);
 }
 
 .content-components {
@@ -187,15 +198,8 @@ i:hover {
   grid-gap: 1rem;
 }
 
-/* end top-bar*/
-
-
-/* Responsive Styles */
-@media screen and (max-width: 767px) {
+.card-border {
+  border: 2px solid var(--bckg-level-second);
+  width: 100%;
+  height: 20%;
 }
-
-@media screen and (max-width: 575px) {
-
-}
-
-

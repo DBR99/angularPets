@@ -1,4 +1,4 @@
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 import {CommonModule} from '@angular/common';
 
 import {HistoryRoutingModule} from './history-routing.module';
@@ -17,7 +17,8 @@ import {PrimengModule} from '../../shared/primeng/primeng.module';
     CommonModule,
     HistoryRoutingModule,
     PrimengModule
-  ]
+  ],
+  providers: [{provide: LOCALE_ID, useValue: 'es'}]
 })
 export class HistoryModule {
 }

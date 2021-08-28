@@ -1,5 +1,6 @@
 export class DescriptionHistoryDTO {
   description?: string;
-  date?: Date;
+  date?: string;
   icon?: string;
+  observations?: string;
 }
