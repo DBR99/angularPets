@@ -5,6 +5,7 @@ import {PetRoutingModule} from './pet-routing.module';
 import {NewComponent} from './new/new.component';
 import {PrimengModule} from '../../shared/primeng/primeng.module';
 import { InfoComponent } from './info/info.component';
+import {ReactiveFormsModule} from '@angular/forms';
 
 
 @NgModule({
@@ -15,7 +16,8 @@ import { InfoComponent } from './info/info.component';
   imports: [
     CommonModule,
     PrimengModule,
-    PetRoutingModule
+    PetRoutingModule,
+    ReactiveFormsModule
   ]
 })
 export class PetModule {

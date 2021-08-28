@@ -1,1 +1,41 @@
-<p>info works!</p>
+<div class="header">
+  <span class="color-white icon-times font-30 pointer" [routerLink]="'/home'"></span>
+  <h1 class="color-white p-align-center">Datos de la mascota</h1>
+</div>
+<div class="wrap">
+  <div class="content">
+    <div class="p-justify-between p-d-flex p-align-center ">
+      <div class="thumbnail">
+        <div class="position-icon icon-cat pointer"></div>
+      </div>
+      <form>
+        <div class="form">
+
+          <span class="p-float-label ">
+            <input formControlName="user" id="name_pet" type="text" pInputText>
+            <label for="name_pet">Nombre de la mascota</label>
+          </span>
+
+          <span class="p-float-label p-mt-4">
+            <input formControlName="user" id="type_pet" type="text" pInputText>
+            <label for="type_pet">Tipo de mascota</label>
+          </span>
+
+          <span class="p-float-label p-mt-4">
+            <input formControlName="age" id="age_pet" type="text" pInputText>
+            <label for="age_pet">Edad</label>
+          </span>
+
+          <span class="p-float-label p-mt-4">
+            <input formControlName="password" id="size_pet" type="text" pInputText>
+            <label for="size_pet">Tamaño Raza</label>
+          </span>
+
+          <p-button class="p-mt-4 p-button-success" label="Guardar"></p-button>
+
+        </div>
+      </form>
+
+    </div>
+  </div>
+</div>

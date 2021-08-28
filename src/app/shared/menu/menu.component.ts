@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {IMenu} from './IMenu';
 import {Router} from '@angular/router';
+import {PetService} from '../../infraestructure/services/pet.service';
 
 @Component({
   selector: 'app-menu',
@@ -13,7 +14,9 @@ export class MenuComponent implements OnInit {
 
   menuItems = new Array<IMenu>();
 
-  constructor() {
+  constructor(private _petService: PetService,
+              private router: Router
+  ) {
     this.menuItems = [
       {
         label: 'Historia clinica',
@@ -34,5 +37,10 @@ export class MenuComponent implements OnInit {
   }
 
   ngOnInit(): void {
+  }
+
+  exit() {
+    this._petService.clear();
+    this.router.navigate(['holi']);
   }
 }

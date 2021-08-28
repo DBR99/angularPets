@@ -8,30 +8,47 @@
       <div class="thumbnail">
         <div class="position-icon icon-cat pointer"></div>
       </div>
-      <form>
+      <form [formGroup]="formRegister" (ngSubmit)="onSubmit()">
         <div class="form">
 
           <span class="p-float-label ">
-            <input formControlName="user" id="name_pet" type="text" pInputText>
+            <input formControlName="name" id="name_pet" type="text" pInputText>
             <label for="name_pet">Nombre de la mascota</label>
           </span>
 
+          <div *ngIf="submitted && form.name.errors">
+            <div *ngIf="form.name.errors.required" class="color-danger">Requerido</div>
+          </div>
+
           <span class="p-float-label p-mt-4">
-            <input formControlName="user" id="type_pet" type="text" pInputText>
+            <input formControlName="type" id="type_pet" type="text" pInputText>
             <label for="type_pet">Tipo de mascota</label>
           </span>
+
+
+          <div *ngIf="submitted && form.type.errors">
+            <div *ngIf="form.type.errors.required" class="color-danger">Requerido</div>
+          </div>
 
           <span class="p-float-label p-mt-4">
             <input formControlName="age" id="age_pet" type="text" pInputText>
             <label for="age_pet">Edad</label>
           </span>
 
+          <div *ngIf="submitted && form.age.errors">
+            <div *ngIf="form.age.errors.required" class="color-danger">Requerido</div>
+          </div>
+
           <span class="p-float-label p-mt-4">
-            <input formControlName="password" id="size_pet" type="text" pInputText>
+            <input formControlName="size" id="size_pet" type="text" pInputText>
             <label for="size_pet">Tamaño Raza</label>
           </span>
 
-          <p-button class="p-mt-4 p-button-success" label="Guardar"></p-button>
+          <div *ngIf="submitted && form.size.errors">
+            <div *ngIf="form.size.errors.required" class="color-danger">Requerido</div>
+          </div>
+
+          <p-button class="p-mt-4 p-button-success" type="submit" label="Guardar"></p-button>
 
         </div>
       </form>
